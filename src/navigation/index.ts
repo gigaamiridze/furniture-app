@@ -1,1 +1,1 @@
-import { default as BottomTabNavigation } from './BottomTabNavigation';
+export { default as StackNavigation } from './StackNavigation';
