@@ -1,7 +1,8 @@
 import React from 'react';
 import { createBottomTabNavigator, BottomTabNavigationOptions } from '@react-navigation/bottom-tabs';
+import Icon from 'react-native-vector-icons/Ionicons';
+import { Routes, Colors, Sizes } from '../constants';
 import { Home, Profile, Search } from '../screens';
-import { Routes } from '../constants';
 
 const Tab = createBottomTabNavigator();
 
@@ -25,9 +26,51 @@ function BottomTabNavigation() {
       initialRouteName={Routes.HOME}
       screenOptions={screenOptions}
     >
-      <Tab.Screen name={Routes.HOME} component={Home} />
-      <Tab.Screen name={Routes.SEARCH} component={Search} />
-      <Tab.Screen name={Routes.PROFILE} component={Profile} />
+      <Tab.Screen 
+        name={Routes.HOME} 
+        component={Home} 
+        options={{
+          tabBarIcon: ({ focused }) => {
+            return (
+              <Icon 
+                name={focused ? 'home' : 'home-outline'}
+                size={Sizes.X_LARGE}
+                color={focused ? Colors.PRIMARY : Colors.GRAY_SECOND}
+              />
+            )
+          } 
+        }}
+      />
+      <Tab.Screen 
+        name={Routes.SEARCH} 
+        component={Search} 
+        options={{
+          tabBarIcon: ({ focused }) => {
+            return (
+              <Icon 
+                name={focused ? 'search-sharp' : 'search-outline'}
+                size={Sizes.X_LARGE}
+                color={focused ? Colors.PRIMARY : Colors.GRAY_SECOND}
+              />
+            )
+          } 
+        }}
+      />
+      <Tab.Screen 
+        name={Routes.PROFILE} 
+        component={Profile} 
+        options={{
+          tabBarIcon: ({ focused }) => {
+            return (
+              <Icon 
+                name={focused ? 'person' : 'person-outline'}
+                size={Sizes.X_LARGE}
+                color={focused ? Colors.PRIMARY : Colors.GRAY_SECOND}
+              />
+            )
+          } 
+        }}
+      />
     </Tab.Navigator>
   )
 }
