@@ -1,6 +1,6 @@
 import React from 'react';
 import { createBottomTabNavigator, BottomTabNavigationOptions } from '@react-navigation/bottom-tabs';
-import Icon from 'react-native-vector-icons/Ionicons';
+import Ionicons from 'react-native-vector-icons/Ionicons';
 import { Routes, Colors, Sizes } from '../constants';
 import { Home, Profile, Search } from '../screens';
 
@@ -32,7 +32,7 @@ function BottomTabNavigation() {
         options={{
           tabBarIcon: ({ focused }) => {
             return (
-              <Icon 
+              <Ionicons 
                 name={focused ? 'home' : 'home-outline'}
                 size={Sizes.X_LARGE}
                 color={focused ? Colors.PRIMARY : Colors.GRAY_SECOND}
@@ -47,7 +47,7 @@ function BottomTabNavigation() {
         options={{
           tabBarIcon: ({ focused }) => {
             return (
-              <Icon 
+              <Ionicons 
                 name={focused ? 'search-sharp' : 'search-outline'}
                 size={Sizes.X_LARGE}
                 color={focused ? Colors.PRIMARY : Colors.GRAY_SECOND}
@@ -62,7 +62,7 @@ function BottomTabNavigation() {
         options={{
           tabBarIcon: ({ focused }) => {
             return (
-              <Icon 
+              <Ionicons 
                 name={focused ? 'person' : 'person-outline'}
                 size={Sizes.X_LARGE}
                 color={focused ? Colors.PRIMARY : Colors.GRAY_SECOND}
