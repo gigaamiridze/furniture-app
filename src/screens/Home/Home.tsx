@@ -1,6 +1,6 @@
 import React from 'react';
 import Ionicons from 'react-native-vector-icons/Ionicons';
-import { SafeAreaView, ScrollView, View } from 'react-native';
+import { SafeAreaView, ScrollView, View, Text } from 'react-native';
 import { Sizes, Colors } from '../../constants';
 import { globalStyle } from '../../assets';
 import { style } from './style';
@@ -15,6 +15,7 @@ function Home() {
             size={Sizes.X_LARGE}
             color={Colors.BLACK}
           />
+          <Text style={style.location}>Tbilisi</Text>
         </View>
       </ScrollView>
     </SafeAreaView>
