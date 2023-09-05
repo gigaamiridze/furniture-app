@@ -8,6 +8,7 @@ export const style = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'space-between',
     paddingTop: Sizes.SMALL,
+    paddingBottom: Sizes.MEDIUM,
   },
   location: {
     fontFamily: getFontFamily('Poppins', 'semiBold'),
@@ -21,7 +22,7 @@ export const style = StyleSheet.create({
     width: Sizes.MEDIUM,
     height: Sizes.MEDIUM,
     borderRadius: 8,
-    backgroundColor: Colors.GREEN,
+    backgroundColor: Colors.PRIMARY,
     alignItems: 'center',
     justifyContent: 'center',
     zIndex: 99,
@@ -30,5 +31,8 @@ export const style = StyleSheet.create({
     fontFamily: getFontFamily('Poppins', 'semiBold'),
     fontSize: Sizes.X_SMALL,
     color: Colors.LIGHT_WHITE,
+  },
+  firstWelcomeText: {
+    marginBottom: 5,
   },
 });

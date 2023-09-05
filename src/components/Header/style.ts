@@ -10,6 +10,7 @@ export const style = StyleSheet.create({
   },
   title1: {
     fontSize: Sizes.XX_LARGE - 5,
+    lineHeight: 48,
   },
   title2: {
     fontSize: Sizes.X_LARGE,
