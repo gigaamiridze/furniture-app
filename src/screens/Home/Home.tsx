@@ -1,12 +1,15 @@
 import React from 'react';
 import Ionicons from 'react-native-vector-icons/Ionicons';
 import { SafeAreaView, ScrollView, View, Text, TouchableOpacity } from 'react-native';
-import { Header, Search } from '../../components';
-import { Sizes, Colors } from '../../constants';
+import { useNavigation } from '@react-navigation/native';
+import { Sizes, Colors, Routes } from '../../constants';
+import { Header, SearchInput } from '../../components';
 import { globalStyle } from '../../assets';
 import { style } from './style';
 
 function Home() {
+  const navigation = useNavigation();
+
   return (
     <SafeAreaView style={globalStyle.flex}>
       <View style={[style.headerWrapper, globalStyle.paddingHorizontal22]}>
@@ -46,11 +49,11 @@ function Home() {
         </View>
         <View style={globalStyle.paddingHorizontal12}>
           <View style={style.searchWrapper}>
-            <Search 
+            <SearchInput 
               placeholder='What are you looking for?'
               firstIcon='search-outline'
               secondIcon='camera-outline'
-              onSearch={() => {}}
+              onPress={() => navigation.navigate(Routes.SEARCH)}
             />
           </View>
         </View>
