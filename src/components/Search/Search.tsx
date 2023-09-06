@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useRef } from 'react';
 import Ionicons from 'react-native-vector-icons/Ionicons';
 import { Pressable, TouchableOpacity, TextInput } from 'react-native';
 import { Colors, Sizes } from '../../constants';
@@ -8,6 +8,11 @@ import { style } from './style';
 function Search(props: ISearchProps) {
   const { placeholder, firstIcon, secondIcon, onSearch } = props;
   const [search, setSearch] = useState<string>('');
+  const textInputRef = useRef<TextInput>(null);
+
+  const handleFocus = () => {
+    textInputRef.current?.focus();
+  }
 
   const handleSearch = (searchValue: string) => {
     setSearch(searchValue);
@@ -15,7 +20,10 @@ function Search(props: ISearchProps) {
   }
 
   return (
-    <Pressable style={style.searchContainer}>
+    <Pressable 
+      style={style.searchContainer}
+      onPress={handleFocus}
+    >
       <Ionicons 
         name={firstIcon}
         size={Sizes.X_LARGE}
@@ -23,6 +31,7 @@ function Search(props: ISearchProps) {
       />
       <TextInput 
         placeholder={placeholder} 
+        ref={textInputRef}
         value={search}
         onChangeText={(value) => handleSearch(value)}
         style={style.searchInput}
