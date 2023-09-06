@@ -1,15 +1,15 @@
 import React from 'react';
 import Ionicons from 'react-native-vector-icons/Ionicons';
 import { SafeAreaView, ScrollView, View, Text, TouchableOpacity } from 'react-native';
+import { Header, Search } from '../../components';
 import { Sizes, Colors } from '../../constants';
 import { globalStyle } from '../../assets';
-import { Header } from '../../components';
 import { style } from './style';
 
 function Home() {
   return (
-    <SafeAreaView style={globalStyle.screenContainer}>
-      <View style={style.headerWrapper}>
+    <SafeAreaView style={globalStyle.flex}>
+      <View style={[style.headerWrapper, globalStyle.paddingHorizontal22]}>
         <Ionicons 
           name='location-outline' 
           size={Sizes.X_LARGE}
@@ -30,18 +30,30 @@ function Home() {
         </View>
       </View>
       <ScrollView showsVerticalScrollIndicator={false}>
-        <View style={style.firstWelcomeText}>
+        <View style={globalStyle.paddingHorizontal22}>
+          <View style={style.firstWelcomeText}>
+            <Header 
+              title='Find The Most' 
+              color={Colors.BLACK}
+              type={1}
+            />
+          </View>
           <Header 
-            title='Find The Most' 
-            color={Colors.BLACK}
-            type={1}
+            title='Luxurious Furniture' 
+            numberOfLines={1}
+            type={1} 
           />
         </View>
-        <Header 
-          title='Luxurious Furniture' 
-          numberOfLines={1}
-          type={1} 
-        />
+        <View style={globalStyle.paddingHorizontal12}>
+          <View style={style.searchWrapper}>
+            <Search 
+              placeholder='What are you looking for?'
+              firstIcon='search-outline'
+              secondIcon='camera-outline'
+              onSearch={() => {}}
+            />
+          </View>
+        </View>
       </ScrollView>
     </SafeAreaView>
   )

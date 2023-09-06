@@ -35,4 +35,8 @@ export const style = StyleSheet.create({
   firstWelcomeText: {
     marginBottom: 5,
   },
+  searchWrapper: {
+    marginTop: Sizes.MEDIUM,
+    marginBottom: Sizes.X_LARGE,
+  },
 });
