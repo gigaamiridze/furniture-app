@@ -37,6 +37,6 @@ export const style = StyleSheet.create({
   },
   searchWrapper: {
     marginTop: Sizes.MEDIUM,
-    marginBottom: Sizes.X_LARGE,
+    marginBottom: 30,
   },
 });

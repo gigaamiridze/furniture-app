@@ -1,9 +1,9 @@
 import React from 'react';
 import Ionicons from 'react-native-vector-icons/Ionicons';
 import { SafeAreaView, ScrollView, View, Text, TouchableOpacity } from 'react-native';
+import { Header, SearchInput, Carousel } from '../../components';
 import { useNavigation } from '@react-navigation/native';
 import { Sizes, Colors, Routes } from '../../constants';
-import { Header, SearchInput } from '../../components';
 import { globalStyle } from '../../assets';
 import { style } from './style';
 
@@ -56,6 +56,7 @@ function Home() {
               onPress={() => navigation.navigate(Routes.SEARCH)}
             />
           </View>
+          <Carousel />
         </View>
       </ScrollView>
     </SafeAreaView>
