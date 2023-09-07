@@ -13,7 +13,8 @@ export const style = StyleSheet.create({
     lineHeight: 48,
   },
   title2: {
-    fontSize: Sizes.X_LARGE,
+    fontSize: Sizes.X_LARGE - 2,
+    lineHeight: 28,
   },
   title3: {
     fontSize: Sizes.MEDIUM,

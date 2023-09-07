@@ -57,6 +57,18 @@ function Home() {
             />
           </View>
           <Carousel />
+          <View style={style.headingContainer}>
+            <Header 
+              title='New Rivals' 
+              color={Colors.BLACK}
+              type={2} 
+            />
+            <Ionicons 
+              name='grid'
+              size={Sizes.X_LARGE}
+              color={Colors.PRIMARY}
+            />
+          </View>
         </View>
       </ScrollView>
     </SafeAreaView>

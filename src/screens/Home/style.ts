@@ -39,4 +39,10 @@ export const style = StyleSheet.create({
     marginTop: Sizes.MEDIUM,
     marginBottom: 30,
   },
+  headingContainer: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'space-between',
+    marginVertical: Sizes.LARGE,
+  },
 });
