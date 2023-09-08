@@ -14,8 +14,14 @@ function Header(props: IHeaderProps) {
         return style.title2;
       case 3:
         return style.title3;
+      case 4:
+        return style.title4;
+      case 5:
+        return style.title5;
+      case 6:
+        return style.title6;
       default:
-        return style.title2;
+        return style.title1;
     }
   }
 

@@ -21,4 +21,18 @@ export const style = StyleSheet.create({
     fontSize: Sizes.LARGE,
     lineHeight: 22,
   },
+  title4: {
+    fontSize: Sizes.MEDIUM,
+    lineHeight: 18,
+  },
+  title5: {
+    fontFamily: getFontFamily('Poppins', 'normal'),
+    fontSize: Sizes.SMALL + 2,
+    lineHeight: 18,
+  },
+  title6: {
+    fontFamily: getFontFamily('Poppins', 'normal'),
+    fontSize: Sizes.SMALL,
+    lineHeight: 16,
+  },
 });
