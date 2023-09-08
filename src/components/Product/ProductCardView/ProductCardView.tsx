@@ -19,6 +19,21 @@ function ProductCardView() {
             numberOfLines={1}
             type={3}
           />
+          <View style={style.flexBlock}>
+            <View style={style.flexWrapper}>
+              <Header 
+                title='Playful Interiors'
+                color={Colors.GRAY}
+                numberOfLines={1}
+                type={6}
+              />
+              <Header 
+                title='$799.99'
+                color={Colors.BLACK}
+                type={4}
+              />
+            </View>
+          </View>
         </View>
       </View>
     </TouchableOpacity>

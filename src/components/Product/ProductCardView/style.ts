@@ -11,12 +11,21 @@ export const style = StyleSheet.create({
   },
   image: {
     width: '100%',
-    height: 130,
+    height: 135,
     resizeMode: 'cover',
     borderRadius: Sizes.SMALL,
   },
   detailsContainer: {
     paddingVertical: Sizes.MEDIUM,
     paddingHorizontal: Sizes.SMALL / 2,
+  },
+  flexBlock: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'space-between',
+    marginTop: 5,
+  },
+  flexWrapper: {
+    rowGap: 5,
   },
 });
