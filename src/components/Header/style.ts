@@ -13,10 +13,12 @@ export const style = StyleSheet.create({
     lineHeight: 48,
   },
   title2: {
+    fontFamily: getFontFamily('Poppins', 'semiBold'),
     fontSize: Sizes.X_LARGE - 2,
     lineHeight: 28,
   },
   title3: {
-    fontSize: Sizes.MEDIUM,
+    fontSize: Sizes.LARGE,
+    lineHeight: 22,
   },
 });

@@ -1,7 +1,7 @@
 import React from 'react';
 import Ionicons from 'react-native-vector-icons/Ionicons';
 import { SafeAreaView, ScrollView, View, Text, TouchableOpacity } from 'react-native';
-import { Header, SearchInput, Carousel } from '../../components';
+import { Header, SearchInput, Carousel, ProductRow } from '../../components';
 import { useNavigation } from '@react-navigation/native';
 import { Sizes, Colors, Routes } from '../../constants';
 import { globalStyle } from '../../assets';
@@ -69,6 +69,7 @@ function Home() {
               color={Colors.PRIMARY}
             />
           </View>
+          <ProductRow />
         </View>
       </ScrollView>
     </SafeAreaView>
