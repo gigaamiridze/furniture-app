@@ -1,11 +1,17 @@
 import React from 'react';
-import { View, Text } from 'react-native';
+import { TouchableOpacity, View, Image } from 'react-native';
+import { style } from './style';
 
 function ProductCardView() {
   return (
-    <View>
-      <Text>Product Card View</Text>
-    </View>
+    <TouchableOpacity>
+      <View style={style.cardContainer}>
+        <Image 
+          style={style.image}
+          source={require('../../../assets/images/fn4.jpg')} 
+        />
+      </View>
+    </TouchableOpacity>
   )
 }
 
