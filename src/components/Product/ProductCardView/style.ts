@@ -15,4 +15,8 @@ export const style = StyleSheet.create({
     resizeMode: 'cover',
     borderRadius: Sizes.SMALL,
   },
+  detailsContainer: {
+    paddingVertical: Sizes.MEDIUM,
+    paddingHorizontal: Sizes.SMALL / 2,
+  },
 });
