@@ -1,6 +1,6 @@
 import React from 'react';
 import Ionicons from 'react-native-vector-icons/Ionicons';
-import { View, TouchableOpacity } from 'react-native';
+import { View, TouchableOpacity, StatusBar } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
 import { BackButton } from '../../components';
 import { globalStyle } from '../../assets';
@@ -12,6 +12,11 @@ function ProductDetails() {
 
   return (
     <View style={globalStyle.screenContainer}>
+      <StatusBar 
+        translucent={true}
+        backgroundColor='transparent'
+        barStyle='dark-content'
+      />
       <View style={style.upperRow}>
         <BackButton onPress={() => navigation.goBack()} />
         <TouchableOpacity>
