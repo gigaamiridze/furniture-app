@@ -11,7 +11,7 @@ export const style = StyleSheet.create({
   },
   image: {
     width: '100%',
-    height: 135,
+    height: 140,
     resizeMode: 'cover',
     borderRadius: Sizes.SMALL,
   },
