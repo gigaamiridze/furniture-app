@@ -1,6 +1,6 @@
 import React from 'react';
 import Ionicons from 'react-native-vector-icons/Ionicons';
-import { View, TouchableOpacity, StatusBar } from 'react-native';
+import { View, TouchableOpacity, StatusBar, Image } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
 import { BackButton } from '../../components';
 import { globalStyle } from '../../assets';
@@ -11,7 +11,7 @@ function ProductDetails() {
   const navigation = useNavigation();
 
   return (
-    <View style={globalStyle.screenContainer}>
+    <View style={globalStyle.flex}>
       <StatusBar 
         translucent={true}
         backgroundColor='transparent'
@@ -27,6 +27,10 @@ function ProductDetails() {
           />
         </TouchableOpacity>
       </View>
+      <Image 
+        source={require('../../assets/images/fn5.jpg')}
+        style={style.image}
+      />
     </View>
   )
 }
