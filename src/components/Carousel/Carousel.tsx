@@ -21,7 +21,7 @@ function Carousel() {
         ImageComponentStyle={style.imageComponentStyle}
         circleLoop={true}
         autoplay={true}
-        autoplayInterval={7000}
+        autoplayInterval={5000}
       />
     </View>
   )

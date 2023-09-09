@@ -3,5 +3,5 @@ export enum Routes {
   CART = 'Cart',
   SEARCH = 'Search',
   PROFILE = 'Profile',
-  PRODUCT_DETAILS = 'Product Details',
+  PRODUCT_DETAILS = 'ProductDetails',
 }
