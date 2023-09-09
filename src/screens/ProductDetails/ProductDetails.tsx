@@ -1,11 +1,28 @@
 import React from 'react';
-import { SafeAreaView, Text } from 'react-native';
+import Ionicons from 'react-native-vector-icons/Ionicons';
+import { View, TouchableOpacity } from 'react-native';
+import { useNavigation } from '@react-navigation/native';
+import { BackButton } from '../../components';
+import { globalStyle } from '../../assets';
+import { Colors } from '../../constants';
+import { style } from './style';
 
 function ProductDetails() {
+  const navigation = useNavigation();
+
   return (
-    <SafeAreaView>
-      <Text>Product Details</Text>
-    </SafeAreaView>
+    <View style={globalStyle.screenContainer}>
+      <View style={style.upperRow}>
+        <BackButton onPress={() => navigation.goBack()} />
+        <TouchableOpacity>
+          <Ionicons 
+            name='heart'
+            color={Colors.PRIMARY}
+            size={30}
+          />
+        </TouchableOpacity>
+      </View>
+    </View>
   )
 }
 
