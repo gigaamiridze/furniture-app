@@ -38,6 +38,14 @@ function ProductDetails() {
             color={Colors.BLACK}
             type={3}
           />
+          <View style={style.priceWrapper}>
+            <Header 
+              title='$799.99'
+              fontWeight='semiBold'
+              color={Colors.BLACK}
+              type={3}
+            />
+          </View>
         </View>
       </View>
     </View>

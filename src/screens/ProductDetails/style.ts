@@ -32,4 +32,11 @@ export const style = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'space-between',
   },
+  priceWrapper: {
+    backgroundColor: Colors.SECONDARY,
+    borderRadius: Sizes.LARGE,
+    paddingHorizontal: Sizes.X_SMALL,
+    paddingTop: Sizes.X_SMALL,
+    paddingBottom: 4,
+  },
 });
