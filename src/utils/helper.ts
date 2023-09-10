@@ -6,18 +6,7 @@
 * @returns {string} - The appropriate font family for the platform.
 */
 
-type FontWeightType = 
-  'thin' | '100' | 
-  'extraLight' | '200' | 
-  'light' | '300' | 
-  'normal' | '400' | 
-  'medium' | '500' | 
-  'semiBold' | '600' | 
-  'bold' | '700' | 
-  'extraBold' | '800' | 
-  'black' | '900'
-;
-type FontFamilyType = 'Poppins';
+import { FontFamilyType, FontWeightType } from '../interfaces';
 
 export const getFontFamily = (baseFont: FontFamilyType = 'Poppins', weight: FontWeightType) => {
   switch (weight) {

@@ -2,7 +2,7 @@ import React from 'react';
 import Ionicons from 'react-native-vector-icons/Ionicons';
 import { View, TouchableOpacity, StatusBar, Image } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
-import { BackButton } from '../../components';
+import { BackButton, Header } from '../../components';
 import { globalStyle } from '../../assets';
 import { Colors } from '../../constants';
 import { style } from './style';
@@ -31,6 +31,15 @@ function ProductDetails() {
         source={require('../../assets/images/fn5.jpg')}
         style={style.image}
       />
+      <View style={style.detailsContainer}>
+        <View style={style.flexRow}>
+          <Header 
+            title='Leather Recliner'
+            color={Colors.BLACK}
+            type={3}
+          />
+        </View>
+      </View>
     </View>
   )
 }

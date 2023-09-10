@@ -60,6 +60,7 @@ function Home() {
           <View style={style.headingContainer}>
             <Header 
               title='New Rivals' 
+              fontWeight='semiBold'
               color={Colors.BLACK}
               type={2} 
             />

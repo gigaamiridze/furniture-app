@@ -1,5 +1,5 @@
 import { StyleSheet } from 'react-native';
-import { Sizes } from '../../constants';
+import { Sizes, Colors } from '../../constants';
 
 export const style = StyleSheet.create({
   upperRow: {
@@ -17,5 +17,19 @@ export const style = StyleSheet.create({
     height: 400,
     aspectRatio: 1,
     resizeMode: 'cover',
+  },
+  detailsContainer: {
+    flex: 1,
+    backgroundColor: Colors.LIGHT_WHITE,
+    borderTopRightRadius: Sizes.MEDIUM,
+    borderTopLeftRadius: Sizes.MEDIUM,
+    paddingVertical: Sizes.LARGE,
+    paddingHorizontal: 22,
+    marginTop: -Sizes.LARGE,
+  },
+  flexRow: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'space-between',
   },
 });

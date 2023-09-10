@@ -1,10 +1,11 @@
 import React from 'react';
 import { Text } from 'react-native';
 import { IHeaderProps } from '../../interfaces';
+import { getFontFamily } from '../../utils';
 import { style } from './style';
 
 function Header(props: IHeaderProps) {
-  const { title, type, color, numberOfLines } = props;
+  const { title, type, color, numberOfLines, fontWeight } = props;
 
   const styleToApply = () => {
     switch (type) {
@@ -32,7 +33,8 @@ function Header(props: IHeaderProps) {
         [
           style.title,
           styleToApply(),
-          color ? { color: color } : null
+          color ? { color: color } : null,
+          fontWeight ? { fontFamily: getFontFamily('Poppins', fontWeight) } : null
         ]
       }
     >
