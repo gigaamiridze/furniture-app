@@ -32,6 +32,11 @@ export const style = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'space-between',
   },
+  flexWrapper: {
+    flexDirection: 'row',
+    alignItems: 'flex-end',
+    columnGap: 7,
+  },
   priceWrapper: {
     backgroundColor: Colors.SECONDARY,
     borderRadius: Sizes.LARGE,

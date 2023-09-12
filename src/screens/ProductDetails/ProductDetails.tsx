@@ -1,14 +1,16 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Ionicons from 'react-native-vector-icons/Ionicons';
-import { View, TouchableOpacity, StatusBar, Image } from 'react-native';
+import { View, TouchableOpacity, StatusBar, Image, Text } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
 import { BackButton, Header } from '../../components';
+import { Rating } from 'react-native-ratings';
 import { globalStyle } from '../../assets';
 import { Colors } from '../../constants';
 import { style } from './style';
 
 function ProductDetails() {
   const navigation = useNavigation();
+  const [rating, setRating] = useState<number>(4.5);
 
   return (
     <View style={globalStyle.flex}>
@@ -44,6 +46,26 @@ function ProductDetails() {
               fontWeight='semiBold'
               color={Colors.BLACK}
               type={3}
+            />
+          </View>
+        </View>
+        <View style={style.flexRow}>
+          <View style={style.flexWrapper}>
+            <Rating 
+              type='star'
+              ratingColor='gold'
+              ratingCount={5}
+              imageSize={24}
+              fractions={1}
+              jumpValue={0.1}
+              startingValue={rating}
+              onSwipeRating={(rating: number) => setRating(rating)}
+            />
+            <Header 
+              title={`(${rating})`}
+              color={Colors.GRAY}
+              fontWeight='medium'
+              type={4}
             />
           </View>
         </View>
