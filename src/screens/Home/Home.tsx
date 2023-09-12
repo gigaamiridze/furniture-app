@@ -1,6 +1,6 @@
 import React from 'react';
 import Ionicons from 'react-native-vector-icons/Ionicons';
-import { SafeAreaView, ScrollView, View, Text, TouchableOpacity } from 'react-native';
+import { SafeAreaView, ScrollView, View, Text, TouchableOpacity, StatusBar } from 'react-native';
 import { Header, SearchInput, Carousel, ProductRow } from '../../components';
 import { useNavigation } from '@react-navigation/native';
 import { Sizes, Colors, Routes } from '../../constants';
@@ -11,7 +11,12 @@ function Home() {
   const navigation = useNavigation();
 
   return (
-    <SafeAreaView style={globalStyle.flex}>
+    <SafeAreaView style={[globalStyle.flex, globalStyle.backgroundGray]}>
+      <StatusBar 
+        translucent={false}
+        backgroundColor={Colors.GRAY_BG}
+        barStyle='dark-content'
+      />
       <View style={[style.headerWrapper, globalStyle.paddingHorizontal22]}>
         <Ionicons 
           name='location-outline' 

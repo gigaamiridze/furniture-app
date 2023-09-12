@@ -7,13 +7,14 @@ enum Colors {
   TERTIARY = '#FF7754',
 
   GRAY = '#83829A',
+  GRAY_BG = '#ECECEC',
   GRAY_SECOND = '#C1C0C8',
 
   LIGHT_WHITE = '#FAFAFC',
   OFF_WHITE = '#F3F4F8',
   WHITE = '#FFFFFF',
   BLACK = '#000000',
-  RED = '#e81e4d',
+  RED = '#E81E4D',
   GREEN = '#00C135',
 };
 
