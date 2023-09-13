@@ -1,12 +1,13 @@
 import React, { useState } from 'react';
 import Ionicons from 'react-native-vector-icons/Ionicons';
+import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
 import { View, TouchableOpacity, StatusBar, Image } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
 import { BackButton, Header } from '../../components';
 import { Rating } from 'react-native-ratings';
+import { style, flexWrapper } from './style';
 import { globalStyle } from '../../assets';
 import { Colors } from '../../constants';
-import { style } from './style';
 
 function ProductDetails() {
   const navigation = useNavigation();
@@ -57,7 +58,7 @@ function ProductDetails() {
           </View>
         </View>
         <View style={[style.flexRow, style.ratingContainer]}>
-          <View style={style.flexWrapper}>
+          <View style={flexWrapper('flex-end', 7)}>
             <Rating 
               type='star'
               ratingColor='gold'
@@ -75,7 +76,7 @@ function ProductDetails() {
               type={4}
             />
           </View>
-          <View style={style.flexWrapper}>
+          <View style={flexWrapper('flex-end', 7)}>
             <TouchableOpacity onPress={() => increment()}>
               <Ionicons 
                 name='add-circle-outline'
@@ -108,6 +109,30 @@ function ProductDetails() {
             title={"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged."}
             type={6} 
           />
+        </View>
+        <View style={[style.flexRow, style.locationContainer]}>
+          <View style={flexWrapper('center', 10)}>
+            <Ionicons 
+              name='location-outline'
+              color={Colors.BLACK}
+              size={20}
+            />
+            <Header 
+              title='Chicago'
+              type={6}
+            />
+          </View>
+          <View style={flexWrapper('center', 10)}>
+            <MaterialCommunityIcons 
+              name='truck-delivery-outline'
+              color={Colors.BLACK}
+              size={20}
+            />
+            <Header 
+              title='Free Delivery'
+              type={6}
+            />
+          </View>
         </View>
       </View>
     </View>

@@ -1,5 +1,12 @@
-import { StyleSheet } from 'react-native';
+import { StyleSheet, ViewStyle } from 'react-native';
+import { AlignItemsType } from '../../interfaces';
 import { Sizes, Colors } from '../../constants';
+
+export const flexWrapper = (alignItems: AlignItemsType, columnGap: number): ViewStyle => ({
+  flexDirection: 'row',
+  alignItems,
+  columnGap,
+});
 
 export const style = StyleSheet.create({
   upperRow: {
@@ -32,11 +39,6 @@ export const style = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'space-between',
   },
-  flexWrapper: {
-    flexDirection: 'row',
-    alignItems: 'flex-end',
-    columnGap: 7,
-  },
   ratingContainer: {
     marginTop: Sizes.SMALL,
     marginBottom: Sizes.X_LARGE,
@@ -50,5 +52,12 @@ export const style = StyleSheet.create({
   },
   descTextWrapper: {
     marginTop: 3,
+  },
+  locationContainer: {
+    backgroundColor: Colors.SECONDARY,
+    borderRadius: Sizes.LARGE,
+    marginVertical: Sizes.SMALL,
+    paddingHorizontal: Sizes.X_SMALL,
+    paddingVertical: 5,
   },
 });
