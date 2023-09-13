@@ -11,6 +11,15 @@ import { style } from './style';
 function ProductDetails() {
   const navigation = useNavigation();
   const [rating, setRating] = useState<number>(4.5);
+  const [quantity, setQuantity] = useState<number>(1);
+
+  const increment = () => setQuantity(prev => prev + 1);
+
+  const decrement = () => {
+    if (quantity > 1) {
+      setQuantity(prev => prev - 1);
+    }
+  }
 
   return (
     <View style={globalStyle.flex}>
@@ -67,6 +76,28 @@ function ProductDetails() {
               fontWeight='medium'
               type={4}
             />
+          </View>
+          <View style={style.flexWrapper}>
+            <TouchableOpacity onPress={() => increment()}>
+              <Ionicons 
+                name='add-circle-outline'
+                color={Colors.GRAY}
+                size={24}
+              />  
+            </TouchableOpacity>
+            <Header 
+              title={quantity}
+              color={Colors.GRAY}
+              fontWeight='medium'
+              type={4}
+            />
+            <TouchableOpacity onPress={() => decrement()}>
+              <Ionicons 
+                name='remove-circle-outline'
+                color={Colors.GRAY}
+                size={24}
+              />
+            </TouchableOpacity>
           </View>
         </View>
       </View>
