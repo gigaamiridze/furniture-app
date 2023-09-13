@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import Ionicons from 'react-native-vector-icons/Ionicons';
-import { View, TouchableOpacity, StatusBar, Image, Text } from 'react-native';
+import { View, TouchableOpacity, StatusBar, Image } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
 import { BackButton, Header } from '../../components';
 import { Rating } from 'react-native-ratings';
@@ -46,19 +46,17 @@ function ProductDetails() {
         <View style={style.flexRow}>
           <Header 
             title='Leather Recliner'
-            color={Colors.BLACK}
             type={3}
           />
           <View style={style.priceWrapper}>
             <Header 
               title='$799.99'
               fontWeight='semiBold'
-              color={Colors.BLACK}
               type={3}
             />
           </View>
         </View>
-        <View style={style.flexRow}>
+        <View style={[style.flexRow, style.ratingContainer]}>
           <View style={style.flexWrapper}>
             <Rating 
               type='star'
@@ -99,6 +97,17 @@ function ProductDetails() {
               />
             </TouchableOpacity>
           </View>
+        </View>
+        <Header 
+          title='Description'
+          fontWeight='medium'
+          type={3}
+        />
+        <View style={style.descTextWrapper}>
+          <Header 
+            title={"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged."}
+            type={6} 
+          />
         </View>
       </View>
     </View>

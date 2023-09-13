@@ -5,7 +5,7 @@ import { Colors, Sizes } from '../../constants';
 export const style = StyleSheet.create({
   title: {
     fontFamily: getFontFamily('Poppins', 'bold'),
-    color: Colors.PRIMARY,
+    color: Colors.BLACK,
     letterSpacing: 0.5,
   },
   title1: {

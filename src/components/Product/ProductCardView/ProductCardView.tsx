@@ -21,7 +21,6 @@ function ProductCardView() {
       <View style={style.detailsContainer}>
         <Header 
           title="Kid's Bunk Bed"
-          color={Colors.BLACK}
           numberOfLines={1}
           type={3}
         />
@@ -35,7 +34,6 @@ function ProductCardView() {
             />
             <Header 
               title='$799.99'
-              color={Colors.BLACK}
               type={4}
             />
           </View>

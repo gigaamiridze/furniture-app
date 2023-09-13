@@ -37,11 +37,18 @@ export const style = StyleSheet.create({
     alignItems: 'flex-end',
     columnGap: 7,
   },
+  ratingContainer: {
+    marginTop: Sizes.SMALL,
+    marginBottom: Sizes.X_LARGE,
+  },
   priceWrapper: {
     backgroundColor: Colors.SECONDARY,
     borderRadius: Sizes.LARGE,
     paddingHorizontal: Sizes.X_SMALL,
     paddingTop: Sizes.X_SMALL,
     paddingBottom: 4,
+  },
+  descTextWrapper: {
+    marginTop: 3,
   },
 });

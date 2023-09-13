@@ -42,12 +42,12 @@ function Home() {
           <View style={style.firstWelcomeText}>
             <Header 
               title='Find The Most' 
-              color={Colors.BLACK}
               type={1}
             />
           </View>
           <Header 
             title='Luxurious Furniture' 
+            color={Colors.PRIMARY}
             numberOfLines={1}
             type={1} 
           />
@@ -66,7 +66,6 @@ function Home() {
             <Header 
               title='New Rivals' 
               fontWeight='semiBold'
-              color={Colors.BLACK}
               type={2} 
             />
             <Ionicons 
