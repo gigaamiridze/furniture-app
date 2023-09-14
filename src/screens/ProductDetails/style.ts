@@ -56,8 +56,18 @@ export const style = StyleSheet.create({
   locationContainer: {
     backgroundColor: Colors.SECONDARY,
     borderRadius: Sizes.LARGE,
-    marginVertical: Sizes.SMALL,
+    marginTop: Sizes.MEDIUM,
+    marginBottom: Sizes.LARGE,
     paddingHorizontal: Sizes.X_SMALL,
     paddingVertical: 5,
+  },
+  buyBtn: {
+    width: Sizes.WIDTH * 0.7,
+    backgroundColor: Colors.BLACK,
+    borderRadius: Sizes.LARGE,
+    paddingLeft: Sizes.SMALL,
+    paddingTop: 8,
+    paddingBottom: 6,
+    marginBottom: Sizes.XX_LARGE,
   },
 });

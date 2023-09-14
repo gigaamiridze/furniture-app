@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import Ionicons from 'react-native-vector-icons/Ionicons';
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
-import { View, TouchableOpacity, StatusBar, Image } from 'react-native';
+import { View, ScrollView, TouchableOpacity, StatusBar, Image, Text } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
 import { BackButton, Header } from '../../components';
 import { Rating } from 'react-native-ratings';
@@ -43,7 +43,10 @@ function ProductDetails() {
         source={require('../../assets/images/fn5.jpg')}
         style={style.image}
       />
-      <View style={style.detailsContainer}>
+      <ScrollView
+        showsVerticalScrollIndicator={false} 
+        style={style.detailsContainer}
+      >
         <View style={style.flexRow}>
           <Header 
             title='Leather Recliner'
@@ -134,7 +137,16 @@ function ProductDetails() {
             />
           </View>
         </View>
-      </View>
+        <View style={style.flexRow}>
+          <TouchableOpacity style={style.buyBtn}>
+            <Header 
+              title='Buy Now'
+              color={Colors.LIGHT_WHITE}
+              type={4}
+            />
+          </TouchableOpacity>
+        </View>
+      </ScrollView>
     </View>
   )
 }

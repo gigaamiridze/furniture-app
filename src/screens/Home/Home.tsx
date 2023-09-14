@@ -1,5 +1,6 @@
 import React from 'react';
 import Ionicons from 'react-native-vector-icons/Ionicons';
+import Fontisto from 'react-native-vector-icons/Fontisto';
 import { SafeAreaView, ScrollView, View, Text, TouchableOpacity, StatusBar } from 'react-native';
 import { Header, SearchInput, Carousel, ProductRow } from '../../components';
 import { useNavigation } from '@react-navigation/native';
@@ -29,8 +30,8 @@ function Home() {
             <Text style={style.cartNumber}>7</Text>
           </View>
           <TouchableOpacity>
-            <Ionicons 
-              name='bag-handle'
+            <Fontisto 
+              name='shopping-bag'
               size={Sizes.X_LARGE}
               color={Colors.BLACK}
             />
