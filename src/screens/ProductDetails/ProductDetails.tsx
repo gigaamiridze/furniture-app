@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import Ionicons from 'react-native-vector-icons/Ionicons';
+import Fontisto from 'react-native-vector-icons/Fontisto';
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
 import { View, ScrollView, TouchableOpacity, StatusBar, Image, Text } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
@@ -137,12 +138,19 @@ function ProductDetails() {
             />
           </View>
         </View>
-        <View style={style.flexRow}>
+        <View style={[style.flexRow, { alignItems: 'flex-start' }]}>
           <TouchableOpacity style={style.buyBtn}>
             <Header 
               title='Buy Now'
               color={Colors.LIGHT_WHITE}
               type={4}
+            />
+          </TouchableOpacity>
+          <TouchableOpacity style={style.addBtn}>
+            <Fontisto 
+              name='shopping-bag'
+              color={Colors.LIGHT_WHITE}
+              size={20}
             />
           </TouchableOpacity>
         </View>

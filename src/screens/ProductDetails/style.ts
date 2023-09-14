@@ -70,4 +70,12 @@ export const style = StyleSheet.create({
     paddingBottom: 6,
     marginBottom: Sizes.XX_LARGE,
   },
+  addBtn: {
+    width: 35,
+    height: 35,
+    borderRadius: 50,
+    backgroundColor: Colors.BLACK,
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
 });
